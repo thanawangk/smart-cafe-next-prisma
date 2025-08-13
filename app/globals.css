@@ -19,6 +19,37 @@
   .layout {
     @apply grid min-h-screen grid-cols-1 lg:grid-cols-[100px_1fr];
   }
+   .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 py-6;
+  }
+
+  .card {
+    @apply rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5;
+  }
+
+  .card-lg {
+    @apply rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5;
+  }
+
+  .input {
+    @apply w-full rounded-full bg-white px-4 py-2.5 text-sm shadow-sm ring-1 ring-black/5 placeholder:text-gray-400 focus:outline-none;
+  }
+
+  .chip {
+    @apply rounded-full bg-white px-3 py-1.5 text-sm shadow-sm ring-1 ring-black/5;
+  }
+
+  .chip-active {
+    @apply bg-black text-white;
+  }
+
+  .btn {
+    @apply rounded-xl px-3 py-2 text-sm ring-1 ring-black/10 hover:bg-gray-50;
+  }
+
+  .btn-primary {
+    @apply rounded-xl bg-black px-4 py-2 text-sm font-semibold text-white hover:opacity-90;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
