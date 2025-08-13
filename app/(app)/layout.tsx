@@ -1,4 +1,5 @@
 import Navbar from "@/components/nav/Navbar";
+import SideBar from "@/components/nav/Sidebar";
 
 export default async function AppLayout({
   children,
@@ -9,8 +10,10 @@ export default async function AppLayout({
   return (
     <>
       <Navbar />
-
-      <main>{children}</main>
+      <div className="layout">
+        <SideBar role="barista" />
+        <main>{children}</main>
+      </div>
     </>
   );
 }

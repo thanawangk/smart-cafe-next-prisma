@@ -15,6 +15,12 @@
   --color-cocoa-dark: #3E2723;
 }
 
+@layer components {
+  .layout {
+    @apply grid min-h-screen grid-cols-1 lg:grid-cols-[100px_1fr];
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

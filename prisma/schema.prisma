@@ -16,3 +16,36 @@ model User {
   role      String
   createdAt DateTime @default(now())
 }
+
+enum OrderStatus {
+  preparing
+  ready
+}
+
+model MenuItem {
+  id         Int         @id @default(autoincrement())
+  name       String
+  price      Int
+  img        String?
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  orderItems OrderItem[]
+}
+
+model Order {
+  id          Int         @id @default(autoincrement())
+  status      OrderStatus @default(preparing)
+  totalPrice  Int
+  createdAt   DateTime    @default(now())
+  completedAt DateTime?
+  items       OrderItem[]
+}
+
+model OrderItem {
+  id         Int      @id @default(autoincrement())
+  order      Order    @relation(fields: [orderId], references: [id])
+  orderId    Int
+  menuItem   MenuItem @relation(fields: [menuItemId], references: [id])
+  menuItemId Int
+  qty        Int
+}
