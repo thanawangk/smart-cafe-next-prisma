@@ -24,7 +24,7 @@ export default function SignInPage() {
               <span className="text-cocoa font-bold">▦</span>
             </div>
             <div className="font-semibold text-cocoa-dark text-lg">
-              Smart <b>POS</b>
+              Smart <b>Café</b>
             </div>
           </div>
 
@@ -103,7 +103,7 @@ export default function SignInPage() {
               <a href="#" className="hover:underline">
                 Forgot password?
               </a>
-              <span>© {new Date().getFullYear()} Smart POS</span>
+              <span>© {new Date().getFullYear()} Smart Café</span>
             </div>
           </form>
         </div>
